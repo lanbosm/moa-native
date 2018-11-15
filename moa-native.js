@@ -44,7 +44,7 @@
 
 		// 	 // window.webkit.messageHandlers.buttonClickGetUserInfo.postMessage(testData);
 		// },
-	    // function buttonClickTest(testData) {
+	    //  buttonClickTest(testData) {
 	    //     var result = testData.result
 	    //     //此处不能直接将回调函数传给iOS需要将回调函数转成字符串,其他的保持不变即可
 	    //     testData.result = result.toString()
