@@ -1,10 +1,20 @@
 !function(win){
+	var u = navigator.userAgent;
+  var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+  var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
 
+  var native = '';
+ 
 	var moa={
 		//返回app
 		handleBackApp(){
 			var code = {testString: "goBack",}
-            window.webkit.messageHandlers.buttonClickGoBack.postMessage(code);
+           
+           if(isAndroid){
+			  	window.moa.native.buttonClickGoBack(code)
+			  }else{
+			   window.webkit.messageHandlers.buttonClickGoBack.postMessage(code)
+			  }
 		},
 	
 		//自动登录
