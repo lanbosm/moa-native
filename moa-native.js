@@ -6,6 +6,7 @@
  
 	var moa={
 		//返回app
+
 		handleBackApp(){
 			var code = {testString: "goBack",}
            
@@ -13,7 +14,7 @@
             	window.webkit.messageHandlers.buttonClickGoBack.postMessage(code)
 			  }else{
 			    window.moa.handleBackApp();
-			  	window.open("www.baidu.com")
+			  
 			  }
 		},
 
@@ -51,7 +52,7 @@
 	}
 
 	win.$moa=moa;
-
+    win.moa={}
 	
 
 }(window)
