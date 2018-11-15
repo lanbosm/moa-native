@@ -13,13 +13,12 @@
            if(isiOS){ 
             	window.webkit.messageHandlers.buttonClickGoBack.postMessage(code)
 			  }else{
-			   	alert('222')
+			   	window.moa1.handleBackApp1();
+			   	alert("2222")
 			  
 			  }
 		},
-		handleBackApp2(){
-			window.moa.handleBackApp1()
-		},
+		
 
 	
 		//自动登录
