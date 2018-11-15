@@ -17,7 +17,9 @@
 			  
 			  }
 		},
-	
+	handleBackApp2(){
+		moa.handleBackApp1()
+	}
 		//自动登录
 		handleAutoLogin(){
 			// var res={
