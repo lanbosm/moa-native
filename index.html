@@ -407,8 +407,7 @@ function fileType(name){
 								
 				 			</div>	
 				 		
-				 			
-				 				
+				 	
 			 		</div>			
 
 			</div>
@@ -470,6 +469,9 @@ function fileType(name){
           	var that=this;
           	$moa.handleAutoLogin().then(res=>{
           		that.user=res;
+          	});
+          	$moa.buttonClickTest().then(res=>{
+          		
           	});
         },
         testWord:function(){
