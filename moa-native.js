@@ -26,15 +26,22 @@
 		 	 	empName:"111",
      			
 		        }
-		
-			this.buttonClickTest({
+			
+			return new Promise((resolve,reject)=>{
+
+				this.buttonClickTest({
 	             result: function(data) {
 	             // demo.innerHTML = data["test"];
 	              // alert(data["test"])
-	              this.res.empName = data["test"]
-	              }
+	              this.res.empName = JSON.parse(data)
+	              resolve(data["test"])
+	            
 	            })
-			 return Promise.resolve(res);
+
+
+			})
+			
+			 
 		  // var testData={'ss':12};
 		  // window.webkit.messageHandlers.buttonClickGetUserInfo.postMessage(testData);
 			
