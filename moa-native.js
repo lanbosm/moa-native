@@ -3,8 +3,10 @@
 	var moa={
 		//返回app
 		handleBackApp(){
-			alert("返回app")
+			var code = {testString: "goBack",}
+            window.webkit.messageHandlers.buttonClickGoBack.postMessage(code);
 		},
+	
 		//自动登录
 		handleAutoLogin(){
 			var res={
