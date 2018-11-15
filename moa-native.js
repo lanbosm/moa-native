@@ -17,9 +17,7 @@
 			  
 			  }
 		},
-		handleBackApp2(){
-			moa1.handleBackApp1()
-		},
+		
 	
 		//自动登录
 		// handleAutoLogin(){
