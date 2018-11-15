@@ -35,6 +35,7 @@
 	              // alert(data["test"])
 	              this.res.empName = JSON.parse(data)
 	              resolve(data["test"])
+	         	 }
 	            
 	            })
 
