@@ -404,7 +404,7 @@ function fileType(name){
 								
 								<mt-button type="primary" class="mt-15" size="large" @click="testWord" >word查看</mt-button>
 
-								<mt-button type="primary" class="mt-15" size="large" @click="handlbtnClick" >word查看2222</mt-button>
+								
 <!-- buttonClickTest -->
 								
 				 			</div>	
@@ -472,9 +472,11 @@ function fileType(name){
       	},
         handleLogin: function() {
           	var that=this;
+          	
           	$moa.handleAutoLogin().then(res=>{
+          		
           		that.user=res;
-          		this.handlbtnClick();
+
           	});
           	
         },

@@ -31,7 +31,7 @@
 		// 	// 	userid:"114"
 		// 	// }
 		// 	// return Promise.resolve(res);
-			buttonClickTest({
+			this.buttonClickTest({
 	             result: function(data) {
 	             // demo.innerHTML = data["test"];
 	              alert(data["test"])
