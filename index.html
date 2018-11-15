@@ -457,7 +457,7 @@ function fileType(name){
       	member:[]
       },
       create(){
-      	this.handlbtnClick()
+      	
       },
       methods: {
       	handleOpen:function(){
@@ -474,6 +474,7 @@ function fileType(name){
           	var that=this;
           	$moa.handleAutoLogin().then(res=>{
           		that.user=res;
+          		this.handlbtnClick();
           	});
           	
         },
