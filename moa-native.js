@@ -10,7 +10,7 @@
 		//自动登录
 		handleAutoLogin(){
 			var res={
-				empName:"欧阳红",
+				empName:"欧阳红2",
       			img_url:"http://192.168.117.151/group1/M00/00/01/wKh1l1tICa2AWBUwAAGOQMQZWts825.jpg",
       			companyId:"38",
 				deptId:"39",
