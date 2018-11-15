@@ -13,7 +13,9 @@
            if(isiOS){ 
             	window.webkit.messageHandlers.buttonClickGoBack.postMessage(code)
 			  }else{
-			    window.moa.handleBackApp();
+			    window.moa.handleBackApp=function(code){
+
+			    }
 			  
 			  }
 		},
