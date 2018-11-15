@@ -36,6 +36,7 @@
 	  //             alert(data["test"])
 	  //             }
 	  //           })
+	  var testData={'ss':12};
 	  window.webkit.messageHandlers.buttonClickGetUserInfo.postMessage(testData);
 			
 		},
