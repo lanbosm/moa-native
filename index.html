@@ -15,7 +15,7 @@
 <style>
 .fileBox{margin:0px;}
 .fileInputP{display:inline-block;width:200px;height:30px;border-radius:5px;overflow:hidden;position:relative; z-index: 99; margin-top: 30px; margin-bottom: 30px;}
-.fileInputP i{display:inline-block;width:200px;height:30px;color:#fff;background:#7d8f33;text-align:center;line-height:30px; font-style: normal;}
+.fileInputP i{display:inline-block;width:200px;height:30px;color:#fff;background:#26a2ff;text-align:center;line-height:30px; font-style: normal;}
 #fileInput{position:absolute;left:0;top:0;right:0;bottom:0;opacity:0;}
 #fileSpan{display:inline-block;width:300px;height:150px;border:2px dashed #ccc;text-align:center;line-height:150px;}
 
@@ -204,7 +204,8 @@ $(function(){
 			
 			var request = $.ajax({
 				type: "POST",
-                url:'http://192.168.117.150:8080/moa/fileUpload.do',
+				//http://192.168.117.150:8080/moa/fileUpload.do
+                url:'https://api.dorodoro-lab.com/cgi-bin/upload/multer',
 				data: formData,			//这里上传的数据使用了formData 对象
 				processData : false, 	//必须false才会自动加上正确的Content-Type
 				contentType : false,
@@ -221,7 +222,7 @@ $(function(){
 				//上传成功后回调
 				success: function(res){
 					console.log(res);
-					oOperation.html('<a onclick="$moa.handleViewAttach(\''+res.file.attachDesc+'\')">查看</a>');
+					oOperation.html('<a onclick="$moa.handleViewAttach(\''+res.fileList.url+'\')">查看</a>');
 					successNum++;
 					console.log(successNum);
 					if(successNum == tr.length){
@@ -352,7 +353,7 @@ function fileType(name){
 					<div class="app-box-row mt-15">
 							<h2>功能1</h2>
 							<div class="mt-15">
-				 				<mt-button  size="large" @click.native="handleLogin">单点登录</mt-button>
+				 				<mt-button  type="primary" size="large" @click.native="handleLogin">单点登录</mt-button>
 				 				<div v-if="user.empName">
 									<div class="name mt-15"><span>姓名:</span> {{user.empName}}</div>
 									<div class="photo mt-15"><img :src="user.img_url"/></div>
@@ -362,7 +363,7 @@ function fileType(name){
 					<div class="app-box-row mt-15">
 							<h2>功能2</h2>
 							<div class="mt-15">
-				 				<mt-button  size="large" @click.native="handleSelect">选人</mt-button>
+				 				<mt-button type="primary"  size="large" @click.native="handleSelect">选人</mt-button>
 				 				<div v-if="member.length>0" class="mt-15">
 									<span class="member" v-for="(item,index) in member">
 										{{item.empName}}
@@ -399,7 +400,11 @@ function fileType(name){
   	
 								</table>
 								
-								<mt-button class="mt-15" size="large" id="fileBtn" >上传</mt-button>
+								<mt-button type="primary" class="mt-15" size="large" id="fileBtn" >上传</mt-button>
+								
+								<mt-button type="primary" class="mt-15" size="large" @click="testWord" >word查看</mt-button>
+
+								
 				 			</div>			
 			 		</div>			
 
@@ -459,6 +464,10 @@ function fileType(name){
           	$moa.handleAutoLogin().then(res=>{
           		that.user=res;
           	});
+        },
+        testWord:function(){
+        	$moa.handleViewAttach('http://static.dorodoro-lab.com/upload/1df058d6f8da65cb330ff3324d37924d.doc')
+        	
         },
         handleSelect: function(){
         	var that=this;
