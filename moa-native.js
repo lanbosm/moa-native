@@ -9,13 +9,14 @@
 		handleBackApp(){
 			var code = {testString: "goBack",}
            
-           if(isAndroid){
-			  	window.moa.buttonClickGoBack(code)
+           if(isiOS){ 
+            	window.webkit.messageHandlers.buttonClickGoBack.postMessage(code)
 			  }else{
-			   window.webkit.messageHandlers.buttonClickGoBack.postMessage(code)
+			    window.moa.handleBackApp();
+			  	window.open("www.baidu.com")
 			  }
 		},
-	
+
 		//自动登录
 		handleAutoLogin(){
 			var res={
