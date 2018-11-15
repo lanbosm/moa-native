@@ -20,6 +20,7 @@
 	
 		//自动登录
 		 handleAutoLogin(){
+		 	alert("333")
 		// 	alert("333")
 		// 	// var res={
 		// 	// 	empName:"欧阳红2",
