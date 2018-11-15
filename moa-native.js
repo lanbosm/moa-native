@@ -31,7 +31,7 @@
 		// 	// 	userid:"114"
 		// 	// }
 		// 	// return Promise.resolve(res);
-			buttonClickTest({
+			this.buttonClickTest({
 	             result: function(data) {
 	             // demo.innerHTML = data["test"];
 	              alert(data["test"])
@@ -42,6 +42,7 @@
 			
 		},
 	    buttonClickTest(testData) {
+	    	alert("111")
 	        var result = testData.result
 	        //此处不能直接将回调函数传给iOS需要将回调函数转成字符串,其他的保持不变即可
 	        testData.result = result.toString()
