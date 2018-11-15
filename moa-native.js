@@ -2,7 +2,6 @@
 	var u = navigator.userAgent;
   var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
   var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-
   var native = '';
  
 	var moa={
@@ -11,7 +10,7 @@
 			var code = {testString: "goBack",}
            
            if(isAndroid){
-			  	window.moa.native.buttonClickGoBack(code)
+			  	window.moa.buttonClickGoBack(code)
 			  }else{
 			   window.webkit.messageHandlers.buttonClickGoBack.postMessage(code)
 			  }
