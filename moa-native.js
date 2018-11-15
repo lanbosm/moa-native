@@ -23,15 +23,15 @@
 		 
 		// 	alert("333")
 		 	 var res={
-		 	 	empName:"欧阳红2",
+		 	 	empName:" ",
      			
 		        }
 		
 			this.buttonClickTest({
 	             result: function(data) {
 	             // demo.innerHTML = data["test"];
-	              alert(data["test"])
-	              this.res.empName = (data["test"])
+	              // alert(data["test"])
+	              this.res.empName = data["test"]
 	              }
 	            })
 			 return Promise.resolve(res);
