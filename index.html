@@ -404,6 +404,8 @@ function fileType(name){
 								
 								<mt-button type="primary" class="mt-15" size="large" @click="testWord" >word查看</mt-button>
 
+								<mt-button type="primary" class="mt-15" size="large" @click="handlbtnClick" >word查看2222</mt-button>
+<!-- buttonClickTest -->
 								
 				 			</div>	
 				 		
@@ -454,6 +456,9 @@ function fileType(name){
       	user:{},
       	member:[]
       },
+      create(){
+      	this.handlbtnClick()
+      },
       methods: {
       	handleOpen:function(){
       		$moa.handleBackApp();
@@ -475,6 +480,11 @@ function fileType(name){
         testWord:function(){
         	$moa.handleViewAttach('http://static.dorodoro-lab.com/upload/1df058d6f8da65cb330ff3324d37924d.doc')
         	
+        },
+        handlbtnClick:function(){
+			$moa.buttonClickTest().then(res=>{
+          		that.data=res;
+          	});
         },
         handleSelect: function(){
         	var that=this;
