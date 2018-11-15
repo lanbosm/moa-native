@@ -15,8 +15,7 @@
 			   	alert("2222")
 			  }
 		},
-		
-
+	
 	
 		//自动登录
 		 handleAutoLogin(){
@@ -30,21 +29,12 @@
 		// 	// 	userid:"114"
 		// 	// }
 		// 	// return Promise.resolve(res);
-			buttonClickTest({
-	             result: function(data) {
-	             // demo.innerHTML = data["test"];
-	              alert(data["test"])
-	              }
-	            })
 			
-		},
-	     buttonClickTest(testData) {
-	        var result = testData.result
-	        //此处不能直接将回调函数传给iOS需要将回调函数转成字符串,其他的保持不变即可
-	        testData.result = result.toString()
+			var result = testData.result
+			testData.result = result.toString()
 	        window.webkit.messageHandlers.buttonClickGetUserInfo.postMessage(testData);
-	    },
-
+		},
+	    
 		//查看附件
 		handleViewAttach(url){
 			alert("查看附件"+url)
