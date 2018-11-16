@@ -22,27 +22,33 @@
 		 handleAutoLogin(){
 		 
 		// 	alert("333")
-		// 	// var res={
-		// 	// 	empName:"欧阳红2",
-  //  //    			img_url:"http://192.168.117.151/group1/M00/00/01/wKh1l1tICa2AWBUwAAGOQMQZWts825.jpg",
-  //  //    			companyId:"38",
-		// 	// 	deptId:"39",
-		// 	// 	deptName:"产品研发运营部",
-		// 	// 	userid:"114"
-		// 	// }
-		// 	// return Promise.resolve(res);
-			this.buttonClickTest({
+		 	 var res={
+		 	 	empName:"111",
+     			
+		        }
+			
+			return new Promise((resolve,reject)=>{
+
+				this.buttonClickTest({
 	             result: function(data) {
 	             // demo.innerHTML = data["test"];
-	              alert(data["test"])
-	              }
+	              // alert(data["test"])
+	              this.res.empName = JSON.parse(data)
+	              resolve(data["test"])
+	         	 }
+	            
 	            })
+
+
+			})
+			
+			 
 		  // var testData={'ss':12};
 		  // window.webkit.messageHandlers.buttonClickGetUserInfo.postMessage(testData);
 			
 		},
 	    buttonClickTest(testData) {
-	    	alert("111")
+
 	        var result = testData.result
 	        //此处不能直接将回调函数传给iOS需要将回调函数转成字符串,其他的保持不变即可
 	        testData.result = result.toString()
