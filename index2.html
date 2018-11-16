@@ -484,13 +484,13 @@ function fileType(name){
         handleLogin: function() {
         	var that=this;
         	var cb=function(res){
-        		alert(res.target);
-        		//that.user=res.target;
+        		that.user=res;
         	}
           	$moa.handleAutoLogin(cb);
         },
         handleLoginCallBack:function(){
         	$moa.handleAutoLoginCallBack();
+        	
         },	
         testWord:function(){
         	$moa.handleViewAttach('http://static.dorodoro-lab.com/upload/1df058d6f8da65cb330ff3324d37924d.doc')
