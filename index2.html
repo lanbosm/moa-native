@@ -478,13 +478,14 @@ function fileType(name){
       		$moa.handleBackApp();
       	},
         handleLogin: function() {
-          	$moa.handleAutoLogin();
+        	var that=this;
+        	var cb=function(res){
+        		that.user=res.target;
+        	}
+          	$moa.handleAutoLogin(cb);
         },
         handleLoginCallBack:function(){
-        	var data={
-        		ss:12
-        	}
-        	$moa.handleAutoLoginCallBack(data);
+        	$moa.handleAutoLoginCallBack();
         },	
         testWord:function(){
         	$moa.handleViewAttach('http://static.dorodoro-lab.com/upload/1df058d6f8da65cb330ff3324d37924d.doc')

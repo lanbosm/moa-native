@@ -23,17 +23,13 @@
 		
 
 		//自动登录
-		 handleAutoLogin(){
+		 handleAutoLogin(cb){
 		 
 		// 	alert("333")
 		// 	// 
 
 			
-			$moa.EventBus.addEventListener("sso", function myFunction(event) {
-				console.log(event)
-			
-			  
-			});
+			$moa.EventBus.addEventListener("sso", cb);
 			
 
 
