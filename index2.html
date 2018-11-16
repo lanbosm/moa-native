@@ -434,7 +434,11 @@ function fileType(name){
 <script type="text/javascript" src="./eventbus.min.js"></script>
 <script type="text/javascript" src="./moa-native2.js"></script>
 <script type="text/javascript">
-
+	if(window.moa){
+		alert('有moa对象')
+	}else{
+		alert('没有Moa对象')
+	}
 	(function (win, doc) {
     var h
     win.addEventListener('resize', function () {
