@@ -8,7 +8,7 @@
 
    
 
-	var moa={
+	var moa2={
 		EventBus:EventBus,
 		//返回app
 		handleBackApp(){
@@ -74,7 +74,7 @@
 
 	}
 
-	win.$moa=moa;
+	win.$moa=moa2;
  
 	
 
