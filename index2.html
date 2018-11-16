@@ -484,7 +484,8 @@ function fileType(name){
         handleLogin: function() {
         	var that=this;
         	var cb=function(res){
-        		that.user=res.target;
+        		alert(res.target);
+        		//that.user=res.target;
         	}
           	$moa.handleAutoLogin(cb);
         },
