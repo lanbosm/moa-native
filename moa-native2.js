@@ -32,7 +32,7 @@
 			$moa.EventBus.addEventListener("sso", cb);
 			
 
-
+			window.moa.showAndroid()
 			// var result = testData.result
 	        //此处不能直接将回调函数传给iOS需要将回调函数转成字符串,其他的保持不变即可
 	      //   testData.result = result.toString()
@@ -48,7 +48,7 @@
 				deptName:"产品研发运营部",
 				userid:"114"
 			}
-	
+			
 			$moa.EventBus.dispatch("sso",res);
 		},
 	   
