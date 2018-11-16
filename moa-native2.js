@@ -29,7 +29,10 @@
 		// 	// 
 
 			
-			$moa.EventBus.addEventListener("sso", cb);
+			$moa.EventBus.addEventListener("sso", function(res){
+					alert('触发回调')
+					alert(res.target)
+			});
 			
 			window.moa.showAndroid('sss');
 		//	window.moa.showAndroid()
